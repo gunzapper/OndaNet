@@ -15,24 +15,23 @@ def iter_links(url, root="http://www.ondarock.it/"):
 
     for anchor in soup.findAll('a'):
         link = anchor.get('href')
-        if len(album_pattern.groups(link))==3:
+        if album_pattern.match(link):
             yield link
 
-def record_ondagraph(url, ondagraph):
-    m = album_pattern.match(url)
-    print m.group('band')
-    nodeName = "%s-%s" %(m.group('band'),
-                         m.group('album'))
-    if nodeName not in ondagraph.nodes():
-        ondagraph.add_node(nodeName)
+def album_name(url):
+    pieces = url.split('_')
+    return "%s-%s" %(pieces[1], pieces[2][:-4])
 
-        for link in iter_links(url):
-            n = album_pattern.match(link)
-            linkName = "%s-%s" %(n.group('band'),
-                                 n.group('album'))
-            ondagraph.add_edge(nodeName, linkName)
+
+def record_ondagraph(url, ondagraph):
+    nodeName = album_name(url)
+    ondagraph.add_node(nodeName)
+
+    for link in iter_links(url):
+        linkName = album_name(link)
+        ondagraph.add_edge(nodeName, linkName)
         print link
-    record_ondagraph(link, ondagraph)
+        record_ondagraph(link, ondagraph)
 
 
 if __name__ == "__main__":
@@ -42,7 +41,7 @@ if __name__ == "__main__":
     ondaGraph = nx.Graph()
     record_ondagraph(url, ondaGraph)
 
-    #print ondaGraph.nodes()
+    print ondaGraph.nodes()
 
     import matplotlib.pyplot as plt
     nx.draw(ondaGraph)
