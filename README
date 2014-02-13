@@ -1,0 +1,21 @@
+-------------------------------------
+OndaNet
+-------------------------------------
+My purpouse is to learn Data Analysis and Data Mining using data from Onda Rock,
+a Italian music portal.
+
+Step 1: A network of the music
+--------------------------------------
+Each review page of Ondarock is conneted with the other
+using hyperlink. I would obtain the network using to parse the pages:
+1) Request
+2) BeautifulSoap
+3) Htlm5lib
+
+To store and analyse the net:
+1)NetworkX
+
+To plot the data
+1) D3
+
+

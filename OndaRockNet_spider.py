@@ -11,7 +11,7 @@ gender_pattern = re.compile(r'(^/storiadelrock/)(?P<gender>w+)\.htm$')
 
 general_pattern = re.compile(r"(?<=^/)(\w+)/(\w+)(?=\.htm$)")
 
-#chose the type reading the html
+#TODO: chose the type reading the html
 
 def iter_links(url, root="http://www.ondarock.it/"):
     r = requests.get(''.join([root, url]))
@@ -40,8 +40,9 @@ def only_album(url, ondagraph):
         else: print link
 
 if __name__ == "__main__":
-    url = r"/recensioni/2014_aavv_sullagiostranellombra.htm"
+   # url = r"/recensioni/2014_aavv_sullagiostranellombra.htm"
     #url = r"/recensioni/2012_prostitutes_psychedelicblack.htm"
+    url = r'/recensioni/2014_sunkilmoon_benji.htm'
 
     ondaGraph = nx.Graph()
     only_album(url, ondaGraph)
