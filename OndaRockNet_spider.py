@@ -97,4 +97,4 @@ if __name__ == "__main__":
     nx.draw(ondaGraph)
     plt.show()
 
-    #TODO: Yeah a IPython Notepade page looks better :)
+    #TODO: Yeah a IPython Notepad page looks better :)
