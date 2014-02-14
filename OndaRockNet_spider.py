@@ -74,13 +74,18 @@ def only_album(url, ondagraph):
     nodeName = album_name(url)
     ondagraph.add_node(nodeName)
 
-    for link in iter_links(url):
-        if album_pattern.match(link):
-            linkName = album_name(link)
-            ondagraph.add_edge(nodeName, linkName)
-            only_album(link, ondagraph)
-        #elif group_pattern.match(link): print link
-        else: print link
+    try:
+        for link in iter_links(url):
+            if album_pattern.match(link):
+                linkName = album_name(link)
+                ondagraph.add_edge(nodeName, linkName)
+                only_album(link, ondagraph)
+            #elif group_pattern.match(link): print link
+            else: print link
+    # If iter_links does not open the page
+    except AssertionError:
+        print("Impossible to reach {0}".format(link))
+        print("It will not be added to the graph\nsorry.")
 
 if __name__ == "__main__":
     #url = r"/recensioni/2014_aavv_sullagiostranellombra.htm"
