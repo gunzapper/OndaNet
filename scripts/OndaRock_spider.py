@@ -76,15 +76,16 @@ def only_album(url, ondagraph):
     """
     nodeName = album_name(url)
     ondagraph.add_node(nodeName)
-
+    print("{0} is linked to:".format(nodeName))
     try:
         for link in iter_links(url):
             if album_pattern.match(link):
                 linkName = album_name(link)
+                print("\t{0}\n".format(linkName))
+
                 ondagraph.add_edge(nodeName, linkName)
                 only_album(link, ondagraph)
-            #elif group_pattern.match(link): print link
-            else: print link
+
     # If iter_links does not open the page
     except AssertionError:
         print("Impossible to reach {0}".format(link))
