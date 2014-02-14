@@ -7,15 +7,18 @@ Step 1: A network of the music
 --------------------------------------
 Each review page of Ondarock is conneted with the other
 using hyperlink. I would obtain the network using to parse the pages:
+
 1. Request
 2. BeautifulSoap
-3- Htlm5lib
+3. Htlm5lib
 4. nltk
 
 To store and analyse the net:
+
 1. NetworkX
 
 To plot the data
+
 1. D3
 
 Step 1.5: find clusters
