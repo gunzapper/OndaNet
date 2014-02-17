@@ -17,15 +17,16 @@ import json
 
 # a list of patterns
 album_pattern = re.compile(r'(^/recensioni/)(?P<year>\d{4})_(?P<band>\w+)_(?P<album>\w+)\.htm$')
-#group_pattern = re.compile(r'(?<=^/)(\w+)/(\w+)(?=\.htm$)')
-#gender_pattern = re.compile(r'(^/storiadelrock/)(?P<gender>w+)\.htm$')
+pietre_miliari_pattern = re.compile(r'(^/pietremiliari/)(?P<band>\w+)_(?P<album>\w+)\.htm$')
+artist_pattern = re.compile(r'(?<=^/)(\w+)/(\w+)(?=\.htm$)')
+gender_pattern = re.compile(r'(^/storiadelrock/)(?P<gender>w+)\.htm$')
 
 # general pattern valid for each ondarock anchor
-#general_pattern = re.compile(r"(?<=^/)(\w+)/(\w+)(?=\.htm$)")
+general_pattern = re.compile(r"(?<=^/)(\w+)/(\w+)(?=\.htm$)")
 
 def get_soup(url):
     """
-    facade for BeautifulSoup works
+   for BeautifulSoup works
 
     :param url: the url of a web page
     :type url: str
@@ -87,6 +88,7 @@ def only_album(url, ondagraph, root="http://www.ondarock.it"):
     :return: the Node Name
     :rtype: str
     """
+
     entire_url = ''.join([root, url])
     try:
         soup = get_soup(entire_url)
@@ -96,7 +98,7 @@ def only_album(url, ondagraph, root="http://www.ondarock.it"):
         print("It will not be added to the graph\nsorry.")
     else:
         nodeName = album_name(soup)
-        ondagraph.add_node(nodeName)
+        ondagraph.add_node(nodeName, group=1)
         for link in iter_links(soup):
             if album_pattern.match(link):
                 # less parsing solution
