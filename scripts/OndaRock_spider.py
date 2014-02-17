@@ -65,6 +65,7 @@ def album_name(soup):
     cut_off = entire_title.find('::')
     title = entire_title[:cut_off]
     title = re.subn(' - ', '\n', title, 1)[0]
+    # probably faster but deprecated
     #title.replace(' - ', '\n', 1)
     return title
 
@@ -148,9 +149,9 @@ def album_net(album_link):
 
 if __name__ == "__main__":
     # examples
-    url = r"/recensioni/2014_aavv_sullagiostranellombra.htm"
+    #url = r"/recensioni/2014_aavv_sullagiostranellombra.htm"
     #url = r"/recensioni/2012_prostitutes_psychedelicblack.htm"
-    #url = r'/recensioni/2014_sunkilmoon_benji.htm'
+    url = r'/recensioni/2014_sunkilmoon_benji.htm'
 
     a_n = album_net(url)
     serialize(a_n)

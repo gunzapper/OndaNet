@@ -3,112 +3,98 @@
     "graph": [], 
     "nodes": [
         {
-            "id": "Kangding Ray\nThe Pentaki Slopes "
+            "id": "Jens Lekman\nI Know What Love Isn't "
         }, 
         {
-            "id": "Prurient\nThrough The Window "
+            "id": "Sun Kil Moon\nAmong The Leaves "
         }, 
         {
-            "id": "Prurient\nOxidation "
+            "id": "Phil Spector\nThe Essential "
         }, 
         {
-            "id": "Violetshaped\nVioletshaped "
+            "id": "Peter Broderick\nHttp://www.itstartshear.com "
         }, 
         {
-            "id": "AA.VV.\nSulla Giostra Nell'ombra "
+            "id": "Sun Kil Moon\nBenji "
         }, 
         {
-            "id": "Vivenza\nR\u00e9alit\u00e9 De L'Automation Directe "
+            "id": "Peter Broderick\nThese Walls Of Mine "
         }, 
         {
-            "id": "Black Rain\nNow I'm Just A Number: Soundtracks 1994-1995 "
+            "id": "Daniel Rossen\nSilent Hour / Golden Mile "
         }, 
         {
-            "id": "Shapednoise\nUntil Human Voices Wake Us "
+            "id": "Grizzly Bear\nShields "
         }, 
         {
-            "id": "Prurient\nWrapped In The Flame Of Illusion, Masked In The Clay Of Behavior "
+            "id": "Mark Kozelek & Desertshore\nMark Kozelek & Desertshore "
         }, 
         {
-            "id": "Atrax Morgue\nExterminate (ristampa) "
+            "id": "Paul McCartney\nNew "
         }, 
         {
-            "id": "Prostitutes\nPsychedelic Black "
+            "id": "Efterklang\nPiramida "
         }, 
         {
-            "id": "Prurient\nTiger Smells A Corpse "
-        }, 
-        {
-            "id": "Vatican Shadow\nOrnamented Walls "
-        }, 
-        {
-            "id": "Vatican Shadow\nSeptember Cell Ep "
+            "id": "Mark Kozelek & Jimmy LaValle\nPerils From The Sea "
         }
     ], 
     "links": [
-        {
-            "source": 1, 
-            "target": 12
-        }, 
-        {
-            "source": 1, 
-            "target": 11
-        }, 
-        {
-            "source": 3, 
-            "target": 12
-        }, 
-        {
-            "source": 3, 
-            "target": 10
-        }, 
         {
             "source": 3, 
             "target": 0
         }, 
         {
-            "source": 3, 
-            "target": 6
+            "source": 4, 
+            "target": 8
         }, 
         {
             "source": 4, 
-            "target": 3
-        }, 
-        {
-            "source": 4, 
-            "target": 7
-        }, 
-        {
-            "source": 7, 
-            "target": 3
-        }, 
-        {
-            "source": 7, 
             "target": 9
         }, 
         {
-            "source": 7, 
+            "source": 4, 
             "target": 1
         }, 
         {
+            "source": 4, 
+            "target": 11
+        }, 
+        {
+            "source": 5, 
+            "target": 3
+        }, 
+        {
             "source": 7, 
-            "target": 5
+            "target": 6
         }, 
         {
             "source": 8, 
+            "target": 11
+        }, 
+        {
+            "source": 9, 
             "target": 2
+        }, 
+        {
+            "source": 10, 
+            "target": 7
+        }, 
+        {
+            "source": 10, 
+            "target": 5
         }, 
         {
             "source": 11, 
-            "target": 2
+            "target": 10
         }, 
         {
-            "source": 12, 
-            "target": 13
+            "source": 11, 
+            "target": 1
         }, 
         {
-            "source": 13, 
-            "target": 8
+            "source": 11, 
+            "target": 5
         }
     ], 
     "multigraph": false
