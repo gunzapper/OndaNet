@@ -1,1 +1,115 @@
-{"directed": true, "graph": [], "nodes": [{"id": "Prurient \n Oxidation "}, {"id": "Prurient \n Tiger Smells A Corpse "}, {"id": "Prurient \n Wrapped In The Flame Of Illusion, Masked In The Clay Of Behavior "}, {"id": "Violetshaped \n Violetshaped "}, {"id": "Vivenza \n R\u00e9alit\u00e9 De L'Automation Directe "}, {"id": "Kangding Ray \n The Pentaki Slopes "}, {"id": "Prurient \n Through The Window "}, {"id": "Shapednoise \n Until Human Voices Wake Us "}, {"id": "Black Rain \n Now I'm Just A Number: Soundtracks 1994-1995 "}, {"id": "AA.VV. \n Sulla Giostra Nell'ombra "}, {"id": "Atrax Morgue \n Exterminate (ristampa) "}, {"id": "Vatican Shadow \n September Cell Ep "}, {"id": "Vatican Shadow \n Ornamented Walls "}, {"id": "Prostitutes \n Psychedelic Black "}], "links": [{"source": 1, "target": 0}, {"source": 2, "target": 0}, {"source": 3, "target": 5}, {"source": 3, "target": 12}, {"source": 3, "target": 8}, {"source": 3, "target": 13}, {"source": 6, "target": 1}, {"source": 6, "target": 12}, {"source": 7, "target": 6}, {"source": 7, "target": 3}, {"source": 7, "target": 4}, {"source": 7, "target": 10}, {"source": 9, "target": 7}, {"source": 9, "target": 3}, {"source": 11, "target": 2}, {"source": 12, "target": 11}], "multigraph": false}
+{
+    "directed": true, 
+    "graph": [], 
+    "nodes": [
+        {
+            "id": "Kangding Ray\nThe Pentaki Slopes "
+        }, 
+        {
+            "id": "Prurient\nThrough The Window "
+        }, 
+        {
+            "id": "Prurient\nOxidation "
+        }, 
+        {
+            "id": "Violetshaped\nVioletshaped "
+        }, 
+        {
+            "id": "AA.VV.\nSulla Giostra Nell'ombra "
+        }, 
+        {
+            "id": "Vivenza\nR\u00e9alit\u00e9 De L'Automation Directe "
+        }, 
+        {
+            "id": "Black Rain\nNow I'm Just A Number: Soundtracks 1994-1995 "
+        }, 
+        {
+            "id": "Shapednoise\nUntil Human Voices Wake Us "
+        }, 
+        {
+            "id": "Prurient\nWrapped In The Flame Of Illusion, Masked In The Clay Of Behavior "
+        }, 
+        {
+            "id": "Atrax Morgue\nExterminate (ristampa) "
+        }, 
+        {
+            "id": "Prostitutes\nPsychedelic Black "
+        }, 
+        {
+            "id": "Prurient\nTiger Smells A Corpse "
+        }, 
+        {
+            "id": "Vatican Shadow\nOrnamented Walls "
+        }, 
+        {
+            "id": "Vatican Shadow\nSeptember Cell Ep "
+        }
+    ], 
+    "links": [
+        {
+            "source": 1, 
+            "target": 12
+        }, 
+        {
+            "source": 1, 
+            "target": 11
+        }, 
+        {
+            "source": 3, 
+            "target": 12
+        }, 
+        {
+            "source": 3, 
+            "target": 10
+        }, 
+        {
+            "source": 3, 
+            "target": 0
+        }, 
+        {
+            "source": 3, 
+            "target": 6
+        }, 
+        {
+            "source": 4, 
+            "target": 3
+        }, 
+        {
+            "source": 4, 
+            "target": 7
+        }, 
+        {
+            "source": 7, 
+            "target": 3
+        }, 
+        {
+            "source": 7, 
+            "target": 9
+        }, 
+        {
+            "source": 7, 
+            "target": 1
+        }, 
+        {
+            "source": 7, 
+            "target": 5
+        }, 
+        {
+            "source": 8, 
+            "target": 2
+        }, 
+        {
+            "source": 11, 
+            "target": 2
+        }, 
+        {
+            "source": 12, 
+            "target": 13
+        }, 
+        {
+            "source": 13, 
+            "target": 8
+        }
+    ], 
+    "multigraph": false
+}

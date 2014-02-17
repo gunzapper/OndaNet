@@ -11,7 +11,6 @@ import requests
 import networkx as nx
 from bs4 import BeautifulSoup
 import re
-#import matplotlib.pyplot as plt
 from networkx.readwrite import json_graph
 import http_server
 import json
@@ -23,7 +22,6 @@ album_pattern = re.compile(r'(^/recensioni/)(?P<year>\d{4})_(?P<band>\w+)_(?P<al
 
 # general pattern valid for each ondarock anchor
 #general_pattern = re.compile(r"(?<=^/)(\w+)/(\w+)(?=\.htm$)")
-
 
 def get_soup(url):
     """
@@ -66,10 +64,9 @@ def album_name(soup):
     entire_title = soup.title.string
     cut_off = entire_title.find('::')
     title = entire_title[:cut_off]
-    title = re.subn('-', '\n', title, 1)[0]
+    title = re.subn(' - ', '\n', title, 1)[0]
     #title.replace(' - ', '\n', 1)
     return title
-
 
 def only_album(url, ondagraph, root="http://www.ondarock.it"):
     """
@@ -86,34 +83,43 @@ def only_album(url, ondagraph, root="http://www.ondarock.it"):
     :type ondagraph: networkx.Graph
     :param root: the home portal
     :type root: str
+    :return: the Node Name
+    :rtype: str
     """
     entire_url = ''.join([root, url])
     try:
         soup = get_soup(entire_url)
+    # If iter_links does not open the page
     except AssertionError:
         print("Impossible to reach {0}".format(link))
         print("It will not be added to the graph\nsorry.")
     else:
         nodeName = album_name(soup)
         ondagraph.add_node(nodeName)
-        #print("{0} is linked to:".format(nodeName))
-
         for link in iter_links(soup):
             if album_pattern.match(link):
-                print(link)
-                linksoup = get_soup(''.join([root, link]))
-                linkName = album_name(linksoup)
-                #print("\t{0}".format(linkName))
+                # less parsing solution
+                linkName = only_album(link, ondagraph)
 
+                # less memory solution
+                #linksoup = get_soup(''.join([root, link]))
+                #linkName = album_name(linksoup)
+                #only_album(link, ondagraph)
+
+                # TODO: not recursive solution
                 ondagraph.add_edge(nodeName, linkName)
-                only_album(link, ondagraph)
 
-    # If iter_links does not open the page
+        return nodeName
 
+def serialize(graph, file="force/force.json"):
+    """
+    Write the graph in the force json file
 
-def serialize(graph):
+    :param graph: NetworkX graph
+    :param file: output json file
+    """
     d = json_graph.node_link_data(graph) # node-link format to serialize
-    json.dump(d, open('force/force.json','w'))
+    json.dump(d, open('force/force.json','w'), indent=4)
 
 def album_net(album_link):
     """
@@ -125,7 +131,7 @@ def album_net(album_link):
 
     >>>album_net(r"/recensioni/2014_aavv_sullagiostranellombra.htm")
 
-    :album_net: the inner url of ondarock page
+    :param album_net: the inner url of ondarock page
     :type url: str
     :return: the album graph
     :rtype: networkx.Graph
