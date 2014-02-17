@@ -11,7 +11,10 @@ import requests
 import networkx as nx
 from bs4 import BeautifulSoup
 import re
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
+from networkx.readwrite import json_graph
+import http_server
+import json
 
 # a list of patterns
 album_pattern = re.compile(r'(^/recensioni/)(?P<year>\d{4})_(?P<band>\w+)_(?P<album>\w+)\.htm$')
@@ -64,7 +67,7 @@ def album_name(soup):
     cut_off = entire_title.find('::')
     title = entire_title[:cut_off]
     title = re.subn('-', '\n', title, 1)[0]
-    #title.replace('-', '\n', 1)
+    #title.replace(' - ', '\n', 1)
     return title
 
 
@@ -108,8 +111,11 @@ def only_album(url, ondagraph, root="http://www.ondarock.it"):
     # If iter_links does not open the page
 
 
+def serialize(graph):
+    d = json_graph.node_link_data(graph) # node-link format to serialize
+    json.dump(d, open('force/force.json','w'))
 
-def album_net(album_link, plot=True):
+def album_net(album_link):
     """
     Return the album net -
     The network that describes
@@ -121,22 +127,16 @@ def album_net(album_link, plot=True):
 
     :album_net: the inner url of ondarock page
     :type url: str
-    :param plot: Do you need to see the graph plot?
-    :type ondagraph: bool
     :return: the album graph
     :rtype: networkx.Graph
     """
     # initialize a directional graph
     ondaGraph = nx.DiGraph()
-    ## initialize a graph
+    # initialize a graph
     #ondaGraph = nx.Graph()
     # populating the graph
     only_album(album_link, ondaGraph)
 
-    if plot:
-        # plot the graph
-        nx.draw(ondaGraph)
-        plt.show()
     return(ondaGraph)
 
 
@@ -147,3 +147,5 @@ if __name__ == "__main__":
     #url = r'/recensioni/2014_sunkilmoon_benji.htm'
 
     a_n = album_net(url)
+    serialize(a_n)
+    http_server.load_url('force/force.html')
