@@ -22,45 +22,53 @@ album_pattern = re.compile(r'(^/recensioni/)(?P<year>\d{4})_(?P<band>\w+)_(?P<al
 #general_pattern = re.compile(r"(?<=^/)(\w+)/(\w+)(?=\.htm$)")
 
 
-def iter_links(url, root="http://www.ondarock.it/"):
+def get_soup(url):
+    """
+    facade for BeautifulSoup works
+
+    :param url: the url of a web page
+    :type url: str
+    :return: BeautifulSoup parser
+    :rtype: BeautifulSoup
+    """
+
+    r = requests.get(url)
+    assert(r.status_code == 200)
+
+    return(BeautifulSoup(r.text))
+
+def iter_links(soup):
     """
     Starting from a web page
     iter_links iterates for each anchor in the page
 
-    >>>for link in iter_links(r"/recensioni/2014_aavv_sullagiostranellombra.htm")):
-    ...    print(link)
-
-    :param url: the url of ondarock page
-    :type url: str
+    :param soup: the parser for the page
+    :type url: BeautifulSoup
     :param root: the page 'home'
     :type root: str
     """
-    r = requests.get(''.join([root, url]))
-    assert(r.status_code == 200)
-
-    soup = BeautifulSoup(r.text)
 
     for anchor in soup.findAll('a'):
         link = anchor.get('href')
         yield link
 
-def album_name(url):
+def album_name(soup):
     """
     From the album name return the album name
     Used as label of the corresponding node
 
-    >>>album_name(r"/recensioni/2014_aavv_sullagiostranellombra.htm")
-    aavv
-    sullagiostranellombra
-
-    :param url: the url of ondarock page
-    :type url: str
+    :param soup: the parser for the page
+    :type url: BeautifulSoup
     """
-    pieces = url.split('_')
-    return "%s\n%s" %(pieces[1], pieces[2][:-4])
+    entire_title = soup.title.string
+    cut_off = entire_title.find('::')
+    title = entire_title[:cut_off]
+    title = re.subn('-', '\n', title, 1)[0]
+    #title.replace('-', '\n', 1)
+    return title
 
 
-def only_album(url, ondagraph):
+def only_album(url, ondagraph, root="http://www.ondarock.it"):
     """
     Recursive function that populates the graph
     of nodes and edges regarding only album web pages
@@ -73,23 +81,32 @@ def only_album(url, ondagraph):
     :type url: str
     :param ondagraph: the graph
     :type ondagraph: networkx.Graph
+    :param root: the home portal
+    :type root: str
     """
-    nodeName = album_name(url)
-    ondagraph.add_node(nodeName)
-    print("{0} is linked to:".format(nodeName))
+    entire_url = ''.join([root, url])
     try:
-        for link in iter_links(url):
+        soup = get_soup(entire_url)
+    except AssertionError:
+        print("Impossible to reach {0}".format(link))
+        print("It will not be added to the graph\nsorry.")
+    else:
+        nodeName = album_name(soup)
+        ondagraph.add_node(nodeName)
+        #print("{0} is linked to:".format(nodeName))
+
+        for link in iter_links(soup):
             if album_pattern.match(link):
-                linkName = album_name(link)
-                print("\t{0}\n".format(linkName))
+                print(link)
+                linksoup = get_soup(''.join([root, link]))
+                linkName = album_name(linksoup)
+                #print("\t{0}".format(linkName))
 
                 ondagraph.add_edge(nodeName, linkName)
                 only_album(link, ondagraph)
 
     # If iter_links does not open the page
-    except AssertionError:
-        print("Impossible to reach {0}".format(link))
-        print("It will not be added to the graph\nsorry.")
+
 
 
 def album_net(album_link, plot=True):
@@ -109,8 +126,10 @@ def album_net(album_link, plot=True):
     :return: the album graph
     :rtype: networkx.Graph
     """
-    # initialize a graph
-    ondaGraph = nx.Graph()
+    # initialize a directional graph
+    ondaGraph = nx.DiGraph()
+    ## initialize a graph
+    #ondaGraph = nx.Graph()
     # populating the graph
     only_album(album_link, ondaGraph)
 
@@ -123,8 +142,8 @@ def album_net(album_link, plot=True):
 
 if __name__ == "__main__":
     # examples
-    #url = r"/recensioni/2014_aavv_sullagiostranellombra.htm"
+    url = r"/recensioni/2014_aavv_sullagiostranellombra.htm"
     #url = r"/recensioni/2012_prostitutes_psychedelicblack.htm"
-    url = r'/recensioni/2014_sunkilmoon_benji.htm'
+    #url = r'/recensioni/2014_sunkilmoon_benji.htm'
 
     a_n = album_net(url)
