@@ -98,7 +98,7 @@ def only_album(url, ondagraph, root="http://www.ondarock.it"):
         print("It will not be added to the graph\nsorry.")
     else:
         nodeName = album_name(soup)
-        ondagraph.add_node(nodeName, group=1)
+        ondagraph.add_node(url, group=0)
         for link in iter_links(soup):
             if album_pattern.match(link):
                 # less parsing solution
@@ -110,7 +110,7 @@ def only_album(url, ondagraph, root="http://www.ondarock.it"):
                 #only_album(link, ondagraph)
 
                 # TODO: not recursive solution
-                ondagraph.add_edge(nodeName, linkName)
+                ondagraph.add_edge(url, link)
 
         return nodeName
 
