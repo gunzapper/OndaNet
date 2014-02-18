@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <style>
 
+h1 {
+    font-size : 12pt;
+    color: #999;
+}
+
 .node {
   stroke: #fff;
   stroke-width: 1.5px;
@@ -16,6 +21,9 @@
 }
 
 </style>
+<head>
+    <title>Ondarock Network Analysis</title>
+</head>
 
 <body>
 <h1>Network of linked albums</h1>
@@ -47,7 +55,6 @@ d3.json("force.json", function(error, graph) {
     .enter().append("line")
       .attr("class", "link")
       .style("stroke-width", function(d) { return Math.sqrt(d.value); });
-      //.attr("orient", "auto")
 
   var node = svg.selectAll(".node")
       .data(graph.nodes)
