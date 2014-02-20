@@ -15,6 +15,8 @@ from networkx.readwrite import json_graph
 import http_server
 import json
 
+import OndaRock_mapper as mapper
+
 # a list of patterns
 album_pattern = re.compile(r'(^/recensioni/)(?P<year>\d{4})_(?P<band>\w+)_(?P<album>\w+)\.htm$')
 pietre_miliari_pattern = re.compile(r'(^/pietremiliari/)(?P<band>\w+)_(?P<album>\w+)\.htm$')

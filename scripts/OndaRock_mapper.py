@@ -7,15 +7,15 @@ __author__ = 'Pietro Brunetti aka gunzapper'
 
 import re
 # a list of patterns
-#root_pattern = re.compile('^http://www\.ondarock\.it')
-album_pattern = re.compile(r'(recensioni)/(\d{4})_(\w+)\.htm$')
-pietre_miliari_pattern = re.compile(r'(pietremiliari)/(\w+)\.htm$')
-artist_pattern = re.compile(r'(rockedintorni|popmuzik|dark|songwriter|altrisuoni|italia|jazz)/(\w+)\.htm$')
-gender_pattern = re.compile(r'(storiadelrock)/(\w+)\.htm$')
 
-general_pattern = re.compile('/\w+/\w+\.htm$')
+album_pattern = re.compile(r'^/(recensioni)/(\d{4})_(\w+)\.htm$')
+pietre_miliari_pattern = re.compile(r'^/(pietremiliari)/(\w+)\.htm$')
+artist_pattern = re.compile(r'^/(rockedintorni|popmuzik|dark|songwriter|altrisuoni|italia|jazz|interviste)/(\w+)\.htm$')
+gender_pattern = re.compile(r'^/(storiadelrock)/(\w+)\.htm$')
 
-root = 'http://www.ondarock.it'
+general_pattern = re.compile('^/\w+/\w+\.htm$')
+
+root_pattern = re.compile('^(http|https)://www\.\w+\.\w+')
 
 import requests
 from bs4 import BeautifulSoup
@@ -30,15 +30,15 @@ class Album_Error(OndaRock_mapper_error):
     pass
 
 class General_parser(object):
-    def __init__(self, url):
-        if url.find(root) == 0:
-            self.url = url
+    def __init__(self, root, path):
+        m1 = root_pattern.match(root)
+        m2 = general_pattern.match(path)
+        if  m1 and m2:
+            self.root = root
+            self.path = path
         else:
-            m = general_pattern.search(url)
-            if m:
-                self.url = ''.join([root, url])
-            else:
-                raise General_parser_error, "the url {0} does not smell as a url"
+            msg = "the url {0}{1} does not smell as a valid url"
+            raise General_parser_error, msg.format(root, path)
 
     def get_soup(self):
         """
@@ -49,7 +49,7 @@ class General_parser(object):
         :rtype: BeautifulSoup
         """
 
-        r = requests.get(self.url)
+        r = requests.get(self.get_url())
         assert(r.status_code == 200)
 
         return(BeautifulSoup(r.text))
@@ -63,18 +63,23 @@ class General_parser(object):
         """
         for anchor in self.get_soup().findAll('a'):
             link = anchor.get('href')
-            yield link
+            m = general_pattern.match(link)
+            if m:
+                yield link
+
+    def get_url(self):
+        return "".join([self.root, self.path])
 
 class Album_parser(General_parser):
-    def __init__(self, url):
-        General_parser.__init__(self, url)
-        s = album_pattern.search(url)
+    def __init__(self, root, path):
+        General_parser.__init__(self, root, path)
+        s = album_pattern.search(path)
         if not s:
-            raise Album_Error, "The url {0} does not match the right pattern".format(url)
+            raise Album_Error, "The url {0} does not match the right pattern".format(path)
         try:
-            soup = super(Album_parser, self).get_soup()
+            soup = self.get_soup()
         except AssertionError:
-            raise Album_Error, "Page {0} no found".format(self.url)
+            raise Album_Error, "Page {0}{1} no found".format(self.root, self.path)
         else:
             self.artist = soup.body.h1.text
             self.title = soup.body.h2.text
@@ -87,12 +92,14 @@ class Album_parser(General_parser):
             self.genders = dati[cl_br+3:].split(',')
 
     def __repr__(self):
-        return "<OndaRockAlbum_parser of {0}>".format(url)
+        return "<OndaRockAlbum_parser of {0}>".format(self.path)
 
 
 
 if __name__ == "__main__":
-    example = Album_parser("http://www.ondarock.it/recensioni/2010_midlake.htm")
+
+    root = 'http://www.ondarock.it'
+    example = Album_parser(root, "/recensioni/2014_temples_sunstructures.htm")
     print(example.artist)
     print(example.title)
     print(example.genders)
@@ -102,9 +109,5 @@ if __name__ == "__main__":
     for link in example.iter_links():
         print(link)
 
-    print example.url
-
-    example2 = Album_parser("/recensioni/2010_midlake.htm")
-    print example2.url
-
+    print example.get_url()
 
