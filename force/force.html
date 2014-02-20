@@ -65,7 +65,7 @@ d3.json("force.json", function(error, graph) {
       .call(force.drag);
 
   node.append("title")
-      .text(function(d) { return d.id; });
+      .text(function(d) { return d.artist+'\n'+d.title+'\n'+d.year; });
 
   force.on("tick", function() {
     link.attr("x1", function(d) { return d.source.x; })

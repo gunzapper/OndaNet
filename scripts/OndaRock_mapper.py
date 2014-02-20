@@ -75,7 +75,7 @@ class Album_parser(General_parser):
         General_parser.__init__(self, root, path)
         s = album_pattern.search(path)
         if not s:
-            raise Album_Error, "The url {0} does not match the right pattern".format(path)
+            raise Album_Error, "The url {0} don't look as an album".format(path)
         try:
             soup = self.get_soup()
         except AssertionError:
