@@ -77,3 +77,6 @@ else:
         def serve(self):
             while self.run:
                 self.handle_request()
+
+if __name__ == "__main__":
+    load_url('force/force.html')

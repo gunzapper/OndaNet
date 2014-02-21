@@ -90,6 +90,13 @@ class Album_parser(General_parser):
             cl_br = dati.find(')')
             self.label = dati[op_br:cl_br]
             self.genders = dati[cl_br+3:].split(',')
+            # for example "../OR3_img/voti/rate_8.gif"
+            for  img in soup.body.findAll('img'):
+                if img['src'][:21] == "../OR3_img/voti/rate_" and img['src'][-4:] == ".gif":
+                    try:
+                        self.rate = int(img['src'][21])
+                    except ValueError:
+                        self.rate = None
 
     def __repr__(self):
         return "<OndaRockAlbum_parser of {0}>".format(self.path)
@@ -105,6 +112,8 @@ if __name__ == "__main__":
     print(example.genders)
     print(example.year)
     print(example.label)
+
+    print(example.rate)
 
     for link in example.iter_links():
         print(link)
