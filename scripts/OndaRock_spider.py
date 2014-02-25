@@ -42,11 +42,11 @@ def only_album(url, ondagraph, group, root="http://www.ondarock.it"):
                        label=album.label,
                        rate=album.rate,
                        year=album.year)
-    for link in album.iter_links():
+    for e,link in enumerate(album.iter_links()):
         m = mapper.album_pattern.match(link)
         if m:
             print '\t', link
-            ondagraph.add_edge(url, link)
+            ondagraph.add_edge(url, link, value=e)
     for link in album.iter_links():
         m = mapper.album_pattern.match(link)
         # recourse only for new link - not lost in loops

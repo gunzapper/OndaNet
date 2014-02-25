@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <!-- From D3 documentation page -->
-<!-- here divided in two files, view network_control.js -->
 <meta charset="utf-8">
 <style>
 
@@ -55,13 +54,13 @@ d3.json("force.json", function(error, graph) {
       .data(graph.links)
     .enter().append("line")
       .attr("class", "link")
-      .style("stroke-width", function(d) { return Math.sqrt(d.value); });
+      .style("stroke-width", function(d) { return Math.sqrt(d.value+1); });
 
   var node = svg.selectAll(".node")
       .data(graph.nodes)
     .enter().append("circle")
       .attr("class", "node")
-      .attr("r", 5)
+      .attr("r", 3)
       .style("fill", function(d) { return color(d.rate); })
       .call(force.drag);
 

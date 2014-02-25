@@ -1,0 +1,1002 @@
+{
+    "directed": false, 
+    "graph": [], 
+    "nodes": [
+        {
+            "group": 1, 
+            "artist": "Antony and the Johnsons", 
+            "title": "I Am A Bird Now", 
+            "label": "Secretly Canadian/wide", 
+            "rate": 8, 
+            "year": "2005", 
+            "genders": [
+                " folk-pop"
+            ], 
+            "id": "/recensioni/2005_antony.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "The Caretaker", 
+            "title": "An Empty Bliss Beyond This World", 
+            "label": "History Always Favours The Winners", 
+            "rate": 6, 
+            "year": "2011", 
+            "genders": [
+                " field recordings", 
+                " drone"
+            ], 
+            "id": "/recensioni/2011_caretaker.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Vivenza", 
+            "title": "R\u00e9alit\u00e9 De L'Automation Directe", 
+            "label": "Rotorelief", 
+            "rate": 7, 
+            "year": "2011", 
+            "genders": [
+                " bruitisme", 
+                " industrial"
+            ], 
+            "id": "/recensioni/2011_vivenza_realite.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Drift", 
+            "title": "Memory Drawings", 
+            "label": "Temporary Residence", 
+            "rate": 7, 
+            "year": "2008", 
+            "genders": [
+                " jazz/post"
+            ], 
+            "id": "/recensioni/2008_drift.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Cold Cave", 
+            "title": "Cremations", 
+            "label": "Hospital Productions", 
+            "rate": 8, 
+            "year": "2009", 
+            "genders": [
+                " synth hardcore"
+            ], 
+            "id": "/recensioni/2009_cremations.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Violetshaped", 
+            "title": "Violetshaped", 
+            "label": "Violet Poison", 
+            "rate": 7, 
+            "year": "2013", 
+            "genders": [
+                " techno", 
+                " post industrial"
+            ], 
+            "id": "/recensioni/2013_violetshaped_violetshaped.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Matmos", 
+            "title": "The Rose Has Teeth In The Mouth Of A Beast", 
+            "label": "Matador", 
+            "rate": 7, 
+            "year": "2006", 
+            "genders": [
+                " elettronica", 
+                " avantgarde"
+            ], 
+            "id": "/recensioni/2006_matmos.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Cold Cave", 
+            "title": "Love Comes Close", 
+            "label": "Matador", 
+            "rate": 8, 
+            "year": "2009", 
+            "genders": [
+                " synth-pop", 
+                " wave"
+            ], 
+            "id": "/recensioni/2009_coldcave.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Leyland Kirby", 
+            "title": "Sadly, The Future Is No Longer What It Was", 
+            "label": "History Always Favours The Winners", 
+            "rate": 8, 
+            "year": "2009", 
+            "genders": [
+                " elettronica", 
+                " dark-ambient"
+            ], 
+            "id": "/recensioni/2009_kirby.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Six Organs Of Admittance", 
+            "title": "The Sun Awakens", 
+            "label": "Drag City", 
+            "rate": 6, 
+            "year": "2006", 
+            "genders": [
+                " psych-folk"
+            ], 
+            "id": "/recensioni/2006_sixorgansofadmittance.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Eluvium", 
+            "title": "Talk Amongst The Trees", 
+            "label": "Temporary Residence", 
+            "rate": 7, 
+            "year": "2005", 
+            "genders": [
+                " ambient"
+            ], 
+            "id": "/recensioni/2005_eluvium.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Vatican Shadow", 
+            "title": "September Cell Ep", 
+            "label": "Bed Of Nails", 
+            "rate": 7, 
+            "year": "2012", 
+            "genders": [
+                " techno", 
+                " industrial", 
+                " synth"
+            ], 
+            "id": "/recensioni/2012_vaticanshadow_septembercell.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Ben Frost", 
+            "title": "By The Throat", 
+            "label": "Bedroom Community", 
+            "rate": 7, 
+            "year": "2009", 
+            "genders": [
+                " ambient-music", 
+                " avantgarde"
+            ], 
+            "id": "/recensioni/2009_benfrost.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Troum", 
+            "title": "Eald-Ge-Str\u00e9on/ Abhij\u00f1\u00e2", 
+            "label": "Beta-lactam Ring", 
+            "rate": 7, 
+            "year": "2009", 
+            "genders": [
+                " dark-ambient", 
+                " drone"
+            ], 
+            "id": "/recensioni/2009_troum.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Leyland Kirby", 
+            "title": "Eager To Tear Apart The Stars", 
+            "label": "History Always Favours The Winners", 
+            "rate": 7, 
+            "year": "2011", 
+            "genders": [
+                " ambient-classical", 
+                " drone"
+            ], 
+            "id": "/recensioni/2011_leylandkirby.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Xela", 
+            "title": "In Bocca Al Lupo", 
+            "label": "Type", 
+            "rate": 6, 
+            "year": "2008", 
+            "genders": [
+                " dark-ambient"
+            ], 
+            "id": "/recensioni/2008_xela.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Aidan Baker", 
+            "title": "Green & Cold", 
+            "label": "Gears Of Sand Recordings", 
+            "rate": 6, 
+            "year": "2007", 
+            "genders": [
+                " psichedelia", 
+                " ambient-drone"
+            ], 
+            "id": "/recensioni/2007_baker.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "KTL", 
+            "title": "KTL 2", 
+            "label": "Editions Mego", 
+            "rate": 6, 
+            "year": "2007", 
+            "genders": [
+                " ambient", 
+                " drone-metal", 
+                " avantgarde"
+            ], 
+            "id": "/recensioni/2007_ktl.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Prurient", 
+            "title": "And Still, Wanting", 
+            "label": "No Fun Productions", 
+            "rate": 7, 
+            "year": "2008", 
+            "genders": [
+                " harsh-noise", 
+                " power electronics"
+            ], 
+            "id": "/recensioni/2008_prurient.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Prostitutes", 
+            "title": "Psychedelic Black", 
+            "label": "Stabudown", 
+            "rate": 7, 
+            "year": "2012", 
+            "genders": [
+                " psych-beat", 
+                " elettronica"
+            ], 
+            "id": "/recensioni/2012_prostitutes_psychedelicblack.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Black Rain", 
+            "title": "Now I'm Just A Number: Soundtracks 1994-1995", 
+            "label": "Blackest Ever Black", 
+            "rate": 6, 
+            "year": "2012", 
+            "genders": [
+                " post-industrial", 
+                " soundtrack"
+            ], 
+            "id": "/recensioni/2012_blackrain_nowimjustanumber.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Aidan Baker & Tim Hecker", 
+            "title": "Fantasma - Parastasie", 
+            "label": "Alien8 Recordings", 
+            "rate": 7, 
+            "year": "2008", 
+            "genders": [
+                " drone", 
+                " ambient-noise"
+            ], 
+            "id": "/recensioni/2008_baker.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Ben Frost", 
+            "title": "Theory Of Machines", 
+            "label": "Bedroom Community", 
+            "rate": 7, 
+            "year": "2007", 
+            "genders": [
+                " elettronica"
+            ], 
+            "id": "/recensioni/2007_benfrost.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Matmos", 
+            "title": "The Civil War", 
+            "label": "Matador", 
+            "rate": 8, 
+            "year": "2003", 
+            "genders": [
+                " elettro-folk", 
+                " glitch"
+            ], 
+            "id": "/recensioni/2003_matmos.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Prurient", 
+            "title": "Wrapped In The Flame Of Illusion, Masked In The Clay Of Behavior", 
+            "label": "Dais Records", 
+            "rate": 4, 
+            "year": "2012", 
+            "genders": [
+                " ambient power electronics"
+            ], 
+            "id": "/recensioni/2012_prurient_wrappedintheflame.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Nico Muhly", 
+            "title": "Mothertongue", 
+            "label": "Bedroom Community", 
+            "rate": 7, 
+            "year": "2008", 
+            "genders": [
+                " post classical", 
+                " avantgarde", 
+                " folk"
+            ], 
+            "id": "/recensioni/2008_muhly.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Prurient", 
+            "title": "Tiger Smells A Corpse", 
+            "label": "Hospital Productions", 
+            "rate": 5, 
+            "year": "2012", 
+            "genders": [
+                " harsh-noise"
+            ], 
+            "id": "/recensioni/2012_prurient_tigersmellsacorpse.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Vex'd", 
+            "title": "Cloud Seed", 
+            "label": "Planet Mu", 
+            "rate": 8, 
+            "year": "2010", 
+            "genders": [
+                " dubstep"
+            ], 
+            "id": "/recensioni/2010_vexd.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Yellow Swans", 
+            "title": "Going Places", 
+            "label": "Type", 
+            "rate": 8, 
+            "year": "2010", 
+            "genders": [
+                " drone-ambient", 
+                " noise"
+            ], 
+            "id": "/recensioni/2010_yellowswans.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Caretaker", 
+            "title": "Persistent Repetition Of Phrases", 
+            "label": "Install", 
+            "rate": 7, 
+            "year": "2008", 
+            "genders": [
+                " avantgarde", 
+                " ambient"
+            ], 
+            "id": "/recensioni/2008_thecaretaker.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Prurient", 
+            "title": "Oxidation", 
+            "label": "Hospital Productions", 
+            "rate": 4, 
+            "year": "2012", 
+            "genders": [
+                " harsh-noise"
+            ], 
+            "id": "/recensioni/2012_prurient_oxidation.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Prurient", 
+            "title": "Rose Pillar", 
+            "label": "Heartworm Press", 
+            "rate": 5, 
+            "year": "2009", 
+            "genders": [
+                " harsh-noise"
+            ], 
+            "id": "/recensioni/2009_prurient.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Mum", 
+            "title": "Summer Make Good", 
+            "label": "Fatcat Records", 
+            "rate": 5, 
+            "year": "2004", 
+            "genders": [
+                " elettrofolk"
+            ], 
+            "id": "/recensioni/2004_mum.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Tim Hecker", 
+            "title": "Ravedeath, 1972", 
+            "label": "Kranky", 
+            "rate": 8, 
+            "year": "2011", 
+            "genders": [
+                " ambient-drone"
+            ], 
+            "id": "/recensioni/2011_timhecker.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Atrax Morgue", 
+            "title": "Exterminate (ristampa)", 
+            "label": "Urashima", 
+            "rate": 7, 
+            "year": "2012", 
+            "genders": [
+                " power electronics", 
+                " slaughter-noise"
+            ], 
+            "id": "/recensioni/2012_atraxmorgue_exterminate.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Kangding Ray", 
+            "title": "The Pentaki Slopes", 
+            "label": "Raster-noton", 
+            "rate": 6, 
+            "year": "2012", 
+            "genders": [
+                " techno"
+            ], 
+            "id": "/recensioni/2012_kangdingray_pentakislopes.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "The Album Leaf", 
+            "title": "In A Safe Place", 
+            "label": "Sub Pop", 
+            "rate": 8, 
+            "year": "2004", 
+            "genders": [
+                " ambient-pop"
+            ], 
+            "id": "/recensioni/2004_thealbumleaf.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Vatican Shadow", 
+            "title": "Ornamented Walls", 
+            "label": "Modern Love", 
+            "rate": 6, 
+            "year": "2012", 
+            "genders": [
+                " techno", 
+                " noise", 
+                " dark ambient"
+            ], 
+            "id": "/recensioni/2012_vaticanshadow_ornamentedwalls.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Shapednoise", 
+            "title": "Until Human Voices Wake Us", 
+            "label": "Opal Tapes", 
+            "rate": 7, 
+            "year": "2013", 
+            "genders": [
+                " post-industrial", 
+                " techno-bruitisme"
+            ], 
+            "id": "/recensioni/2013_shapednoise_untilhumanvoiceswakeus.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Prurient", 
+            "title": "Bermuda Drain", 
+            "label": "Hydra Head", 
+            "rate": 6, 
+            "year": "2011", 
+            "genders": [
+                " cold synth-wave", 
+                " harsh-noise"
+            ], 
+            "id": "/recensioni/2011_prurient.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Roly Porter", 
+            "title": "Aftertime", 
+            "label": "Subtext", 
+            "rate": 8, 
+            "year": "2011", 
+            "genders": [
+                " ambient-drone"
+            ], 
+            "id": "/recensioni/2011_rolyporter.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Prurient", 
+            "title": "Through The Window", 
+            "label": "Blackest Ever Black", 
+            "rate": 5, 
+            "year": "2013", 
+            "genders": [
+                " minimal techno", 
+                " cosmica"
+            ], 
+            "id": "/recensioni/2013_prurient_throughthewindow.htm"
+        }, 
+        {
+            "group": 0, 
+            "artist": "AA.VV.", 
+            "title": "Sulla Giostra Nell'ombra", 
+            "label": "Violet Poison", 
+            "rate": 8, 
+            "year": "2014", 
+            "genders": [
+                " techno", 
+                " power electronics", 
+                " post industrial"
+            ], 
+            "id": "/recensioni/2014_aavv_sullagiostranellombra.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Six Organs Of Admittance", 
+            "title": "School Of The Flower", 
+            "label": "Drag City", 
+            "rate": 6, 
+            "year": "2005", 
+            "genders": [
+                " psych-folk"
+            ], 
+            "id": "/recensioni/2005_sixorgansofadmittance.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Sigur R\u00f2s", 
+            "title": "()", 
+            "label": "Fatcat Records", 
+            "rate": 8, 
+            "year": "2002", 
+            "genders": [
+                " dream-pop"
+            ], 
+            "id": "/recensioni/2002_sigurros.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Cold Cave", 
+            "title": "Cherish The Light Years", 
+            "label": "Matador", 
+            "rate": 7, 
+            "year": "2011", 
+            "genders": [
+                " synth-pop"
+            ], 
+            "id": "/recensioni/2011_coldcave.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Jefre Cantu-Ledesma", 
+            "title": "Love Is A Stream", 
+            "label": "Type", 
+            "rate": 7, 
+            "year": "2010", 
+            "genders": [
+                " drone-gaze"
+            ], 
+            "id": "/recensioni/2010_jefrecantuledesma.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Current 93", 
+            "title": "Black Ships Ate The Sky", 
+            "label": "Durtro", 
+            "rate": 8, 
+            "year": "2006", 
+            "genders": [
+                " apocalyptic-folk"
+            ], 
+            "id": "/recensioni/2006_current93.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Valgeir Sigurdsson", 
+            "title": "Ekv\u00edlibr\u00edum", 
+            "label": "Bedroom Community", 
+            "rate": 6, 
+            "year": "2007", 
+            "genders": [
+                " elettronica", 
+                " dream-pop"
+            ], 
+            "id": "/recensioni/2007_sigurdsson.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Amiina", 
+            "title": "Kurr", 
+            "label": "Ever", 
+            "rate": 6, 
+            "year": "2007", 
+            "genders": [
+                " dream-folk"
+            ], 
+            "id": "/recensioni/2007_amiina.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Tim Hecker", 
+            "title": "An Imaginary Country", 
+            "label": "Kranky", 
+            "rate": 7, 
+            "year": "2009", 
+            "genders": [
+                " ambient", 
+                " drone"
+            ], 
+            "id": "/recensioni/2009_hecker.htm"
+        }, 
+        {
+            "group": 1, 
+            "artist": "Bonnie Prince Billy", 
+            "title": "The Letting Go", 
+            "label": "Drag City", 
+            "rate": 7, 
+            "year": "2006", 
+            "genders": [
+                " folk", 
+                " songwriter"
+            ], 
+            "id": "/recensioni/2006_bonnieprincebilly.htm"
+        }
+    ], 
+    "links": [
+        {
+            "source": 0, 
+            "target": 6, 
+            "value": 3
+        }, 
+        {
+            "source": 0, 
+            "target": 47, 
+            "value": 7
+        }, 
+        {
+            "source": 1, 
+            "target": 14, 
+            "value": 1
+        }, 
+        {
+            "source": 1, 
+            "target": 8, 
+            "value": 2
+        }, 
+        {
+            "source": 1, 
+            "target": 29, 
+            "value": 1
+        }, 
+        {
+            "source": 2, 
+            "target": 38, 
+            "value": 2
+        }, 
+        {
+            "source": 3, 
+            "target": 46, 
+            "value": 3
+        }, 
+        {
+            "source": 4, 
+            "target": 31, 
+            "value": 2
+        }, 
+        {
+            "source": 4, 
+            "target": 11, 
+            "value": 1
+        }, 
+        {
+            "source": 4, 
+            "target": 7, 
+            "value": 3
+        }, 
+        {
+            "source": 5, 
+            "target": 38, 
+            "value": 0
+        }, 
+        {
+            "source": 5, 
+            "target": 40, 
+            "value": 1
+        }, 
+        {
+            "source": 5, 
+            "target": 37, 
+            "value": 0
+        }, 
+        {
+            "source": 5, 
+            "target": 42, 
+            "value": 1
+        }, 
+        {
+            "source": 5, 
+            "target": 19, 
+            "value": 6
+        }, 
+        {
+            "source": 5, 
+            "target": 35, 
+            "value": 2
+        }, 
+        {
+            "source": 5, 
+            "target": 20, 
+            "value": 5
+        }, 
+        {
+            "source": 6, 
+            "target": 22, 
+            "value": 3
+        }, 
+        {
+            "source": 6, 
+            "target": 23, 
+            "value": 1
+        }, 
+        {
+            "source": 7, 
+            "target": 45, 
+            "value": 4
+        }, 
+        {
+            "source": 7, 
+            "target": 31, 
+            "value": 2
+        }, 
+        {
+            "source": 8, 
+            "target": 14, 
+            "value": 2
+        }, 
+        {
+            "source": 8, 
+            "target": 29, 
+            "value": 1
+        }, 
+        {
+            "source": 9, 
+            "target": 47, 
+            "value": 0
+        }, 
+        {
+            "source": 9, 
+            "target": 43, 
+            "value": 1
+        }, 
+        {
+            "source": 10, 
+            "target": 50, 
+            "value": 4
+        }, 
+        {
+            "source": 11, 
+            "target": 39, 
+            "value": 2
+        }, 
+        {
+            "source": 11, 
+            "target": 45, 
+            "value": 3
+        }, 
+        {
+            "source": 11, 
+            "target": 37, 
+            "value": 0
+        }, 
+        {
+            "source": 11, 
+            "target": 24, 
+            "value": 0
+        }, 
+        {
+            "source": 12, 
+            "target": 25, 
+            "value": 4
+        }, 
+        {
+            "source": 12, 
+            "target": 33, 
+            "value": 4
+        }, 
+        {
+            "source": 12, 
+            "target": 22, 
+            "value": 0
+        }, 
+        {
+            "source": 12, 
+            "target": 49, 
+            "value": 1
+        }, 
+        {
+            "source": 12, 
+            "target": 48, 
+            "value": 3
+        }, 
+        {
+            "source": 13, 
+            "target": 28, 
+            "value": 0
+        }, 
+        {
+            "source": 14, 
+            "target": 40, 
+            "value": 6
+        }, 
+        {
+            "source": 15, 
+            "target": 46, 
+            "value": 4
+        }, 
+        {
+            "source": 16, 
+            "target": 50, 
+            "value": 1
+        }, 
+        {
+            "source": 17, 
+            "target": 40, 
+            "value": 5
+        }, 
+        {
+            "source": 18, 
+            "target": 26, 
+            "value": 1
+        }, 
+        {
+            "source": 21, 
+            "target": 50, 
+            "value": 2
+        }, 
+        {
+            "source": 22, 
+            "target": 40, 
+            "value": 2
+        }, 
+        {
+            "source": 24, 
+            "target": 39, 
+            "value": 1
+        }, 
+        {
+            "source": 24, 
+            "target": 30, 
+            "value": 0
+        }, 
+        {
+            "source": 26, 
+            "target": 30, 
+            "value": 0
+        }, 
+        {
+            "source": 26, 
+            "target": 41, 
+            "value": 0
+        }, 
+        {
+            "source": 27, 
+            "target": 40, 
+            "value": 0
+        }, 
+        {
+            "source": 28, 
+            "target": 46, 
+            "value": 2
+        }, 
+        {
+            "source": 28, 
+            "target": 50, 
+            "value": 1
+        }, 
+        {
+            "source": 28, 
+            "target": 40, 
+            "value": 3
+        }, 
+        {
+            "source": 30, 
+            "target": 39, 
+            "value": 0
+        }, 
+        {
+            "source": 31, 
+            "target": 39, 
+            "value": 2
+        }, 
+        {
+            "source": 32, 
+            "target": 36, 
+            "value": 3
+        }, 
+        {
+            "source": 33, 
+            "target": 51, 
+            "value": 3
+        }, 
+        {
+            "source": 33, 
+            "target": 50, 
+            "value": 0
+        }, 
+        {
+            "source": 33, 
+            "target": 46, 
+            "value": 6
+        }, 
+        {
+            "source": 33, 
+            "target": 40, 
+            "value": 4
+        }, 
+        {
+            "source": 33, 
+            "target": 36, 
+            "value": 2
+        }, 
+        {
+            "source": 34, 
+            "target": 38, 
+            "value": 4
+        }, 
+        {
+            "source": 36, 
+            "target": 44, 
+            "value": 2
+        }, 
+        {
+            "source": 37, 
+            "target": 41, 
+            "value": 1
+        }, 
+        {
+            "source": 38, 
+            "target": 41, 
+            "value": 1
+        }, 
+        {
+            "source": 38, 
+            "target": 42, 
+            "value": 0
+        }, 
+        {
+            "source": 39, 
+            "target": 41, 
+            "value": 2
+        }, 
+        {
+            "source": 39, 
+            "target": 45, 
+            "value": 0
+        }, 
+        {
+            "source": 46, 
+            "target": 50, 
+            "value": 0
+        }
+    ], 
+    "multigraph": false
+}
